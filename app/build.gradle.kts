@@ -4,12 +4,10 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Sdk.COMPILE_SDK_VERSION)
-
+    compileSdk = Sdk.COMPILE_SDK_VERSION
     defaultConfig {
-        minSdkVersion(Sdk.MIN_SDK_VERSION)
-        targetSdkVersion(Sdk.TARGET_SDK_VERSION)
-
+        minSdk = Sdk.MIN_SDK_VERSION
+        targetSdk = Sdk.TARGET_SDK_VERSION
         applicationId = AppCoordinates.APP_ID
         versionCode = AppCoordinates.APP_VERSION_CODE
         versionName = AppCoordinates.APP_VERSION_NAME
@@ -34,12 +32,10 @@ android {
             )
         }
     }
-
-    lintOptions {
+    lint {
         isWarningsAsErrors = true
         isAbortOnError = true
     }
-
     // Use this block to configure different flavors
 //    flavorDimensions("version")
 //    productFlavors {
@@ -56,16 +52,12 @@ android {
 
 dependencies {
     implementation(kotlin("stdlib-jdk7"))
-
     implementation(project(":library-android"))
     implementation(project(":library-kotlin"))
-
     implementation(SupportLibs.ANDROIDX_APPCOMPAT)
     implementation(SupportLibs.ANDROIDX_CONSTRAINT_LAYOUT)
     implementation(SupportLibs.ANDROIDX_CORE_KTX)
-
     testImplementation(TestingLib.JUNIT)
-
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_EXT_JUNIT)
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_EXT_JUNIT_KTX)
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_RULES)

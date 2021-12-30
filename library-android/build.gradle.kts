@@ -8,16 +8,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Sdk.COMPILE_SDK_VERSION)
-
+    compileSdk = Sdk.COMPILE_SDK_VERSION
     defaultConfig {
-        minSdkVersion(Sdk.MIN_SDK_VERSION)
-        targetSdkVersion(Sdk.TARGET_SDK_VERSION)
-
+        minSdk = Sdk.MIN_SDK_VERSION
+        targetSdk = Sdk.TARGET_SDK_VERSION
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -25,7 +22,6 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -35,8 +31,7 @@ android {
             )
         }
     }
-
-    lintOptions {
+    lint {
         isWarningsAsErrors = true
         isAbortOnError = true
     }
@@ -44,12 +39,9 @@ android {
 
 dependencies {
     implementation(kotlin("stdlib-jdk7"))
-
     implementation(SupportLibs.ANDROIDX_APPCOMPAT)
     implementation(SupportLibs.ANDROIDX_CORE_KTX)
-
     testImplementation(TestingLib.JUNIT)
-
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_RUNNER)
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_EXT_JUNIT)
 }

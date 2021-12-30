@@ -7,17 +7,17 @@ object Sdk {
 object Versions {
     const val ANDROIDX_TEST_EXT = "1.1.3"
     const val ANDROIDX_TEST = "1.4.0"
-    const val APPCOMPAT = "1.3.0"
-    const val CONSTRAINT_LAYOUT = "2.0.4"
-    const val CORE_KTX = "1.6.0"
+    const val APPCOMPAT = "1.4.0"
+    const val CONSTRAINT_LAYOUT = "2.1.2"
+    const val CORE_KTX = "1.7.0"
     const val ESPRESSO_CORE = "3.4.0"
     const val JUNIT = "4.13.2"
-    const val KTLINT = "0.42.0"
+    const val KTLINT = "0.43.2"
 }
 
 object BuildPluginsVersion {
-    const val DETEKT = "1.17.1"
-    const val KTLINT = "10.1.0"
+    const val DETEKT = "1.19.0"
+    const val KTLINT = "10.2.1"
     const val VERSIONS_PLUGIN = "0.39.0"
 }
 
